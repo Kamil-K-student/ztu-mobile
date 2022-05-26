@@ -14,6 +14,12 @@
         android:theme="@style/Theme.Samochod"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityClick"
+            android:exported="false"
+            android:label="@string/title_activity_click"
+            android:theme="@style/Theme.Samochod.NoActionBar" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,6 +27,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
