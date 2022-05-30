@@ -21,12 +21,15 @@ public class ListCar extends AppCompatActivity {
 
         ListView listview = findViewById(R.id.listview);
 
-        List<String> list = new ArrayList<>();
-        list.add("Dziadzia");
-        list.add("Mariusz");
-        list.add("Agata");
+        List<Object> list = new ArrayList<>();
+        List<String> list1 = new ArrayList<>();
+        Car ford = new Car(1, "Ford", "Mondeo",
+                "@drawable/ic_launcher_background.xml");
+        list.add(ford);
+        list1.add(ford.getBrand() + " " + ford.getModel());
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, list);
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, list1);
         listview.setAdapter(arrayAdapter);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

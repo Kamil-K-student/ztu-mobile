@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 openActivityList();
             }
         });
+
     }
     public void openActivityList(){
         Intent intent = new Intent(this, ListCar.class);
