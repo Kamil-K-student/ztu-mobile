@@ -7,9 +7,9 @@
     tools:context=".ActivityClick">
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CAR"
-        android:layout_centerInParent="true"/>
+        android:text="@string/details" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

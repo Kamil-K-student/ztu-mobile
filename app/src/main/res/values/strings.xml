@@ -10,4 +10,20 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="dalej">DALEJ</string>
+    <string name="todo">TODO</string>
+    <string name="details">Details</string>
+
+    <string-array name="car_brand">
+        <item> Ford </item>
+        <item> Renault </item>
+        <item> Citroen </item>
+    </string-array>
+    
+    <string-array name="car_model">
+        <item> Mondeo </item>
+        <item> Clio </item>
+        <item> C4 </item>
+    </string-array>
+
 </resources>
