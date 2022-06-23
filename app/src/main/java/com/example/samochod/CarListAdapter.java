@@ -3,7 +3,6 @@ package com.example.samochod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,17 +11,19 @@ import java.util.ArrayList;
 
 public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarListHolder> {
 
-    private ArrayList<Car> carList;
+    private final ArrayList<Car> carList;
+    private final RecyclerViewInterface recyclerViewInterface;
 
-    public CarListAdapter(ArrayList<Car> carList){
+    public CarListAdapter(ArrayList<Car> carList, RecyclerViewInterface recyclerViewInterface){
         this.carList = carList;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
     @Override
     public CarListAdapter.CarListHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
-        return new CarListHolder(itemView);
+        return new CarListHolder(itemView, recyclerViewInterface);
     }
 
     @Override
@@ -36,15 +37,20 @@ public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarListH
         return carList.size();
     }
 
-    public static class CarListHolder extends RecyclerView.ViewHolder {
+    public static class CarListHolder extends RecyclerView.ViewHolder{
         TextView textViewBrand, textViewModel;
-        ImageView imageViewCar;
 
-        public CarListHolder(@NonNull View itemView) {
+        public CarListHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             textViewBrand = itemView.findViewById(R.id.textViewBrand);
             textViewModel = itemView.findViewById(R.id.textViewModel);
-//            imageViewCar = itemView.findViewById(R.id.imageViewCar);
-        }
-    }
-}
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(recyclerViewInterface != null){
+                        int pos = getBindingAdapterPosition();
+
+                        if(pos != RecyclerView.NO_POSITION){
+                            recyclerViewInterface.onItemClick(pos);
+                        }}}});
+        }}}

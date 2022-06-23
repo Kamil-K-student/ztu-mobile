@@ -1,5 +1,6 @@
 package com.example.samochod;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -8,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class ListCarActivity extends AppCompatActivity {
+public class ListCarActivity extends AppCompatActivity implements RecyclerViewInterface {
 
     private ArrayList<Car> cars;
     private RecyclerView recyclerView;
@@ -25,10 +26,21 @@ public class ListCarActivity extends AppCompatActivity {
     }
 
     private void setAdapter(){
-        CarListAdapter adapter = new CarListAdapter(cars);
+        CarListAdapter adapter = new CarListAdapter(cars, this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(this, DetailsActivity.class);
+        startActivity(intent);
+
+        intent.putExtra("brand", cars.get(position).getBrand());
+        intent.putExtra("model", cars.get(position).getModel());
+
+        startActivity(intent);
     }
 }
