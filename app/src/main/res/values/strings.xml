@@ -2,7 +2,6 @@
     <string name="app_name">Samochod</string>
     <string name="witaj_w_komisie_samochodowym">Witaj w komisie samochodowym</string>
     <string name="title_activity_click">ActivityClick</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -15,6 +14,9 @@
     <string name="details">Details</string>
     <string name="biometricAuth">Autentykacja biometryczna</string>
     <string name="authBioStr">Uwierzytelnianie biometryczne</string>
+    <string name="pin">Wpisz PIN</string>
+    <string name="pinIn">PIN</string>
+    <string name="loginBtn">ZALOGUJ</string>
 
     <string-array name="car_brand">
         <item> Ford </item>
