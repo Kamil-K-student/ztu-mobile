@@ -36,11 +36,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
+                Toast.makeText(getApplicationContext(),
+                                authError + errString, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
+                Toast.makeText(getApplicationContext(),
+                        authSucceeded , Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, Welcome.class);
                 startActivity(intent);
             }
@@ -48,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
+                Toast.makeText(getApplicationContext(), authFiled, Toast.LENGTH_SHORT).show();
             }
         });
 
