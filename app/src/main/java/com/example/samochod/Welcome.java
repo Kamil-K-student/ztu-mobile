@@ -26,7 +26,7 @@ public class Welcome extends AppCompatActivity {
 
     }
     public void openActivityList(){
-        Intent intent = new Intent(this, ListCar.class);
+        Intent intent = new Intent(this, ListCarActivity.class);
         startActivity(intent);
     }
 

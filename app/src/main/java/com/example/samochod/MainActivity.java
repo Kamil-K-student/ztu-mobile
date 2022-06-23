@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onAuthenticationSucceeded(result);
                 Toast.makeText(getApplicationContext(),
                         authSucceeded , Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, Welcome.class);
+                Intent intent = new Intent(MainActivity.this, ListCarActivity.class);
                 startActivity(intent);
             }
 
