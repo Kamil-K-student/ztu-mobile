@@ -4,79 +4,68 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.*;
 import androidx.core.content.ContextCompat;
+
 import android.content.Intent;
-
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
-
 import java.util.concurrent.Executor;
 
-import static androidx.biometric.BiometricManager.Authenticators.*;
 
 public class MainActivity extends AppCompatActivity {
+
+    String authError = "Błąd uwierzytelniania: ";
+    String authSucceeded = "Zakończono sukcesem";
+    String authFiled = "Zakończono niepowodzeniem";
+    String titlePrompt = "Uwierzytelnianie biometryczne";
+    String btnPrompt = "Zakończ";
+    Button nextBtn;
+    Executor executor;
+    BiometricPrompt biometricPrompt;
+    BiometricPrompt.PromptInfo promptInfo;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        nextBtn.findViewById(R.id.authBioBtn);
 
-        goToNext();
-        Executor executor = ContextCompat.getMainExecutor(this);
-        BiometricPrompt biometricPrompt = new BiometricPrompt(MainActivity.this, executor, new BiometricPrompt.AuthenticationCallback() {
+        executor = ContextCompat.getMainExecutor(this);
+        biometricPrompt = new BiometricPrompt(MainActivity.this, executor, new BiometricPrompt.AuthenticationCallback() {
             @Override
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
                 Toast.makeText(getApplicationContext(),
-                                "Authentication error: " + errString, Toast.LENGTH_SHORT).show();
+                                authError + errString, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
                 Toast.makeText(getApplicationContext(),
-                        "Authentication succeeded!" , Toast.LENGTH_SHORT).show();
+                        authSucceeded , Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, Welcome.class);
+                startActivity(intent);
             }
 
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
-                Toast.makeText(getApplicationContext(), "Authentication failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), authFiled, Toast.LENGTH_SHORT).show();
             }
         });
 
-        BiometricPrompt.PromptInfo.Builder promptInfo = promptInfo();
-        promptInfo.setNegativeButtonText("Cancel");
-        biometricPrompt.authenticate(promptInfo.build());
+        promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle(titlePrompt)
+                .setNegativeButtonText(btnPrompt).build();
 
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                biometricPrompt.authenticate(promptInfo);
+            }
+        });
     }
-
-    BiometricPrompt.PromptInfo.Builder promptInfo()
-    {
-        return new BiometricPrompt.PromptInfo.Builder()
-                .setTitle("Biometric login")
-                .setSubtitle("Log in using your biometric credential");
-    }
-
-    void goToNext()
-    {
-        BiometricManager manager = BiometricManager.from(this);
-        switch (manager.canAuthenticate(BIOMETRIC_WEAK | BIOMETRIC_STRONG))
-        {
-            case BiometricManager.BIOMETRIC_SUCCESS:
-                Intent intent = new Intent(this, ListCar.class);
-                startActivity(intent);
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
-                break;
-            default:
-
-        }
-
-    }
-
 }
