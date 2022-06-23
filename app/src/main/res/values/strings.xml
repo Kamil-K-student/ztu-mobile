@@ -17,6 +17,8 @@
     <string name="pin">Wpisz PIN</string>
     <string name="pinIn">PIN</string>
     <string name="loginBtn">ZALOGUJ</string>
+    <string name="updateBtn">ZMIEN</string>
+    <string name="deleteBtn">USUN</string>
 
     <string-array name="car_brand">
         <item> Ford </item>
