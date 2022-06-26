@@ -19,6 +19,9 @@
     <string name="loginBtn">ZALOGUJ</string>
     <string name="updateBtn">ZMIEN</string>
     <string name="deleteBtn">USUN</string>
+    <string name="loginText">Zaloguj się</string>
+    <string name="registerText">Zarejestruj się</string>
+    <string name="password">Hasło</string>
 
     <string-array name="car_brand">
         <item> Ford </item>

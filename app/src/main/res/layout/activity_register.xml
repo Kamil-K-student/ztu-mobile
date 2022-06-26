@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_margin="20dp"
     android:layout_width="match_parent"
+    android:layout_margin="20dp"
     android:layout_height="match_parent">
-
-
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/loginText"
+        android:text="@string/registerText"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="#001AFF" />
 
@@ -29,7 +28,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
-        android:id="@+id/etLoginEmail"
+        android:id="@+id/etRegisterEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -44,7 +43,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
-        android:id="@+id/etLoginPassword"
+        android:id="@+id/etRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -57,21 +56,21 @@
         android:layout_weight="1" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/loginText"
+        android:text="@string/registerText"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
-        android:id="@+id/tvSwitchToRegister"
+        android:id="@+id/tvSwitchToLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:linksClickable="true"
-        android:text="@string/registerText"
+        android:text="@string/loginText"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#0037FF" />
+        android:textColor="#052DF8" />
 
     <Space
         android:layout_width="match_parent"
