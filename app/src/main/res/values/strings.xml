@@ -22,7 +22,9 @@
     <string name="loginText">Zaloguj się</string>
     <string name="registerText">Zarejestruj się</string>
     <string name="password">Hasło</string>
-
+    <string name="email">Email</string>
+    <string name="wyloguj">Wyloguj</string>
+    <string name="emailTxt">Email</string>
     <string-array name="car_brand">
         <item> Ford </item>
         <item> Renault </item>

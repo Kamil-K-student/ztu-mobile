@@ -13,7 +13,7 @@
         android:gravity="center"
         android:text="@string/registerText"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        android:textColor="#001AFF" />
+        android:textColor="@color/purple_500" />
 
     <Space
         android:layout_width="match_parent"
@@ -21,29 +21,30 @@
         android:layout_weight="1" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/emailTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="@string/emailTxt"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
-        android:id="@+id/etRegisterEmail"
+        android:id="@+id/emailETxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:ignore="TextFields" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/passTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/password"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
-        android:id="@+id/etRegisterPassword"
+        android:id="@+id/passETxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -56,14 +57,14 @@
         android:layout_weight="1" />
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/registerBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/registerText"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
-        android:id="@+id/tvSwitchToLogin"
+        android:id="@+id/toLoginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
