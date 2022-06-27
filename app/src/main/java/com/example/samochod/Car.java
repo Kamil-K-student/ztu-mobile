@@ -29,6 +29,7 @@ public class Car {
     public String getModel() {
         return model;
     }
+
     public String getInformation(){
         return brand + " " + model;
     }

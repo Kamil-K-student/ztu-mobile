@@ -46,6 +46,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.169"
+            android:theme="@style/Button.Gray"
             app:layout_constraintStart_toEndOf="@+id/updateBtn"
             tools:ignore="MissingConstraints" />
 
@@ -59,6 +60,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.325"
             app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/Button.Gray"
             tools:ignore="MissingConstraints" />
 
         <TextView

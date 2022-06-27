@@ -19,6 +19,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Button.Gray" parent="ThemeOverlay.AppCompat">
+        <item name="colorPrimary">@android:color/darker_gray</item>
+    </style>
+
     <style name="Theme.Samochod.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Samochod.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
