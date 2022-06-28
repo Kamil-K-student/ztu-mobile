@@ -38,10 +38,10 @@ public class DetailsActivity extends AppCompatActivity {
         });
 
         Button addNew = findViewById(R.id.addBtn);
-        update.setOnClickListener(new View.OnClickListener() {
+        addNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DetailsActivity.this, WelcomeActivity.class);
+                Intent intent = new Intent(DetailsActivity.this, AddCarActivity.class);
                 startActivity(intent);
             }
         });

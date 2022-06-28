@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "5869541778",
+    "firebase_url": "https://samochod-5bfdb-default-rtdb.firebaseio.com",
     "project_id": "samochod-5bfdb",
     "storage_bucket": "samochod-5bfdb.appspot.com"
   },
