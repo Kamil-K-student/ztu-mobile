@@ -14,6 +14,12 @@ public class Car {
         this.picture = picture;
     }
 
+    Car(String brand, String model){
+        this.brand = brand;
+        this.model = model;
+    }
+
+
     public int getId() {
         return id;
     }
