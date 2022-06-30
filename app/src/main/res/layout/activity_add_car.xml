@@ -5,87 +5,85 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/brandTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+    <ScrollView
+        android:layout_width="297dp"
+        android:layout_height="826dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.492">
 
-    <EditText
-        android:id="@+id/modelTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/brandTxt" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/deleteBtn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="168dp"
-            android:text="@string/deleteBtn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.169"
-            android:theme="@style/Button.Gray"
-            app:layout_constraintStart_toEndOf="@+id/updateBtn"
-            tools:ignore="MissingConstraints" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/updateBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="168dp"
-            android:text="@string/updateBtn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.325"
-            app:layout_constraintStart_toStartOf="parent"
-            android:theme="@style/Button.Gray"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textViewBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/brand" />
 
-        <TextView
-            android:id="@+id/textViewBrand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/brand"
-            tools:layout_editor_absoluteX="102dp"
-            tools:layout_editor_absoluteY="192dp" />
+            <EditText
+                android:id="@+id/modelTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
 
-        <TextView
-            android:id="@+id/textViewModel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/model"
-            tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="289dp" />
+            <TextView
+                android:id="@+id/textViewModel"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/model" />
 
-        <Button
-            android:id="@+id/addBtn"
-            android:layout_width="203dp"
-            android:layout_height="40dp"
-            android:text="@string/addNewCar"
-            tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="582dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/brandTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="127dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <Button
+                android:id="@+id/updateBtn"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="68dp"
+                android:text="@string/updateBtn"
+                android:theme="@style/Button.Gray"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:text="@string/deleteBtn"
+                android:theme="@style/Button.Gray"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="477dp" />
+
+            <Button
+                android:id="@+id/addBtn"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:text="@string/addNewCar"
+                tools:layout_editor_absoluteX="7dp"
+                tools:layout_editor_absoluteY="590dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
