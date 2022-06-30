@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "5869541778",
-    "project_id": "samochod-5bfdb",
-    "storage_bucket": "samochod-5bfdb.appspot.com"
+    "project_number": "1037892158915",
+    "project_id": "samochod-1273b",
+    "storage_bucket": "samochod-1273b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:5869541778:android:383369ac22ec0d1f4a494b",
+        "mobilesdk_app_id": "1:1037892158915:android:012966bf7f52cd5e32a976",
         "android_client_info": {
           "package_name": "com.example.samochod"
         }
       },
       "oauth_client": [
         {
-          "client_id": "5869541778-i7rptp7s4u5n840l8dvjafjf9spuva8e.apps.googleusercontent.com",
+          "client_id": "1037892158915-t041kr9h49qtd4vi7b728i88j2udtdmr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC87vXs7PAvJXElSAAtNUu7Vdsw8DE-VUo"
+          "current_key": "AIzaSyD-r9VeAeECyf4gZjt-I_PaNrGwX896xI4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "5869541778-i7rptp7s4u5n840l8dvjafjf9spuva8e.apps.googleusercontent.com",
+              "client_id": "1037892158915-t041kr9h49qtd4vi7b728i88j2udtdmr.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
