@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.List;
 import java.util.concurrent.Executor;
 
 
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         nextBtn = findViewById(R.id.authBioBtn);
+
+//        openWelcomeActivity();
         firebaseAuth = FirebaseAuth.getInstance();
 
         executor = ContextCompat.getMainExecutor(this);

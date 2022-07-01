@@ -28,6 +28,8 @@
     <string name="brand">Marka</string>
     <string name="model">Model</string>
     <string name="addNewCar">Dodaj nowy</string>
+    <string name="brandImg">Brand</string>
+    <string name="modelImg">Model</string>
 
     <string-array name="car_brand">
         <item> Ford </item>

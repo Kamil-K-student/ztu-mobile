@@ -30,13 +30,15 @@ public class AddCarActivity extends AppCompatActivity {
         Button addBtn = findViewById(R.id.addBtn);
         EditText brandETxt = findViewById(R.id.modelTxt);
         EditText modeETxt = findViewById(R.id.brandTxt);
-
-        String brand = brandETxt.getText().toString();
-        String model = modeETxt.getText().toString();
+        brandETxt.setText(null);
+        modeETxt.setText(null);
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String brand = brandETxt.getText().toString();
+                String model = modeETxt.getText().toString();
 
                 if (brand.isEmpty() || model.isEmpty()){
 
@@ -57,5 +59,6 @@ public class AddCarActivity extends AppCompatActivity {
                             brandETxt.setText(null);
                             modeETxt.setText(null);
                         }
-                    });}}
+                    });}
+            }
         });}}

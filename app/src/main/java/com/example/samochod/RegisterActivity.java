@@ -78,11 +78,13 @@ public class RegisterActivity extends AppCompatActivity {
                                         .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
-                                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                                                startActivity(intent);
-                                                finish();
+
                                             }
                                         });
+
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                startActivity(intent);
+
                             } else {
                                 Toast.makeText(RegisterActivity.this, "Błąd rejestracji", Toast.LENGTH_LONG).show();
                             }}});
